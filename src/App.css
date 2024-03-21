@@ -1,0 +1,141 @@
+.navbar{
+  background-color:rgb(0, 0, 0);
+  height:100px;
+  font-size:25px;
+  font-family:'Times New Roman', Times, serif;
+  list-style-type: none;
+  
+}
+
+.bg-user{
+  background-color:white;
+  background-size:cover;
+  height:100vh;
+  width:100%;
+  
+}
+.card-user{
+  background-color:black;
+  height:100vh;
+  width:100%;
+  border-radius:5px;
+
+
+ 
+}
+.userform{
+  font-size:30px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+  text-align:center;
+  margin-bottom:25px;
+}
+.form-label{
+  font-size:25px;
+  font-family:'Times New Roman', Times, serif;
+  color:white;
+   width:50%;
+  padding:5px;
+  margin-left:5px;
+}
+
+#authorname{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+
+#authordatabirth{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+
+}
+
+#authorbiography{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+   height:15vh;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+#Author{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+#Tital{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+#publication_date{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+#ISBN_number{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:black;
+   width:70%;
+  padding:10px;
+  margin-left:10px;
+  overflow: scroll;
+}
+
+.btns{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  margin:25px;
+  background-color:green;
+  color:white;
+}
+
+
+.btnr{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  margin:25px;
+  background-color:rgb(220, 23, 42);
+  color:white;
+}
+.err{
+  color:red;
+  font-size:15px;
+  font-family:'Times New Roman', Times, serif;
+  margin-top:10px;
+  margin-left:10px;
+  margin-bottom:0;
+  
+}
+.homebg{
+  background-image:url("https://res.cloudinary.com/ddjjx7t57/image/upload/v1710991695/cafe-frankfurt-germany_2_hx7w54.jpg");
+  background-size:cover;
+  height:100vh;
+  
+
+}
