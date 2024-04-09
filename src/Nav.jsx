@@ -18,6 +18,7 @@ const Nav = () => {
                <li className="nav-item">
                      <Link to={'/author'}className="nav-link  text-light" >Author</Link>
                 </li>
+            
              </ul>
               
             

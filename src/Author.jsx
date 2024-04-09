@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as yup from "yup"
@@ -11,6 +11,14 @@ biography:yup.string().required("Biography is Required")
 
 });
 const Author = () => {
+    const[data,setdata]=useState([])
+    console.log(data);
+  
+    // const deletetask=(author)=>{
+    //     setdata(data.filter((d)=>d.author!==author))
+
+    // }
+
     return (
          <Formik initialValues={{
          author: "",
@@ -19,11 +27,12 @@ const Author = () => {
 
          }}
          validationSchema={myvalidationSchema}
-         onSubmit={values=>console.log(values)}>
+         onSubmit={values=>setdata([...data,values])}>
 
             {formikprops=>{
                 const {values}=formikprops
                 return(
+                    <div>
                     <Form>
                         <div className='bg-user'>
             <div className='container'>
@@ -45,20 +54,33 @@ const Author = () => {
                       <ErrorMessage component="p" name='biography' className='err'/>
                        <button type="submit" className='btns'>Sumbit</button>
                        <button type="reset" className='btnr'>Delete</button>
-               
+                   
                    </div>
+                
+
                     </div>
                 </div>
             </div>
            
         </div>
-
-
                     </Form>
+
+                    <div>
+                    {data.map((d,index)=>(
+                     <div  className="container card-6" key={index}>
+        
+                              <h3 className='m-3 p-2'> Author name :{d.author}</h3>
+                              <h4 className='m-3 p-2'>Data  of  birth :{d.dataofbirth}</h4>
+                              <h4 className='m-3 p-2'>Biography:{d.biography}</h4>
+                     </div>
+                    )) }
+                    </div>
+            </div>
                 )
             }}
          
         </Formik>
+        
     );
 };
 

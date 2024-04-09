@@ -4,6 +4,7 @@ import Users from './Users';
 import Author from './Author';
 import Nav from './Nav';
 import Home from './Home';
+import Record from './Record';
 
 const Datapro = () => {
     return (
@@ -14,6 +15,7 @@ const Datapro = () => {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/user' element={<Users/>}/>
                 <Route path='/author' element={<Author/>}/>
+            
               
             </Routes>
             

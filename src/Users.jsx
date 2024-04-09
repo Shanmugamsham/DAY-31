@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as yup from "yup"
@@ -12,6 +12,8 @@ const myvalidationSchema=yup.object().shape({
     });
 
 const Users = () => {
+     const[data,setdata]=useState([])
+     console.log(data);
     return (
         <Formik initialValues={{
             Title: "",
@@ -22,11 +24,12 @@ const Users = () => {
    
             }}
             validationSchema={myvalidationSchema}
-            onSubmit={values=>console.log(values)}>
+            onSubmit={values=>setdata([...data,values])}>
    
                {formikprops=>{
                    const {values}=formikprops
                    return(
+                    <div>
                        <Form>
                            <div className='bg-user'>
                <div className='container'>
@@ -66,6 +69,20 @@ const Users = () => {
    
    
                        </Form>
+
+
+                       <div>
+                    {data.map((d,index)=>(
+                     <div  className="container card-6" key={index}>
+        
+                              <h3 className='m-3 p-2'> Title :{d.Title}</h3>
+                              <h4 className='m-3 p-2'>Author Name :{d.Author}</h4>
+                              <h4 className='m-3 p-2'>ISBN Number:{d.ISBN_number}</h4>
+                              <h4 className='m-3 p-2'>Publication Date:{d.publication_date}</h4>
+                     </div>
+                    )) }
+                    </div>
+                       </div>
                    )
                }}
             
